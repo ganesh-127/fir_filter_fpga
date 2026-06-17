@@ -3,11 +3,14 @@ Design and Timing Closure of a Pipelined N-Tap FIR Filter  using SystemVerilog o
 
 ## Results
 
+### MAC Units
+![MAC Units](mac_unit_zoomed.png)
+
 ### Timing Summary
-![Timing Summary](docs/timing_summary.png)
+![Timing Summary](timing_constraints.png)
 
 ### Resource Utilization
-![Utilization Report](docs/utilization_report.png)
+![Utilization Report](util_report.png)
 
 ### Simulation Waveform
-![Simulation Waveform](docs/simulation_waveform.png)
+![Simulation Waveform](vivado_fir1.png)
