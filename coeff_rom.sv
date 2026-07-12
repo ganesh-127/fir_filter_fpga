@@ -8,7 +8,6 @@ module coeff_rom #(
     input  logic [ADDR_WIDTH-1:0]         addr,
     output logic signed [COEFF_WIDTH-1:0] coeff_out
 );
-    // Asynchronous read — simpler, no 1-cycle delay issue
     logic signed [COEFF_WIDTH-1:0] rom [0:TAPS-1];
 
     initial begin
@@ -21,8 +20,6 @@ module coeff_rom #(
         rom[6] = 16'sd203;
         rom[7] = 16'sd46;
     end
-
-    // CHANGED: Asynchronous read to avoid address-data mismatch
     assign coeff_out = rom[addr];
 
 endmodule
